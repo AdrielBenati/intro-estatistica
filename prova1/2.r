@@ -1,5 +1,4 @@
-### Questão 2 da prova 1
-## Considere  os n=10  algarismos  de  seu  número  de  matricula,  com  estes  10numeros fa ̧ca o seguinte,
+### Questão 2
 ## Capturar input do usuário como string
 matricula <- readline(prompt="Insira sua matrícula: ")
 
