@@ -6,13 +6,13 @@
 
 * 4)
 
-#+name: questão-4
-#+begin_src R :results output :tangle 4.r
+#+begin_src R :results output :exports both 
   conjunto <- c(7, 8, 6, 10, 5, 9, 4, 12, 7, 8)
   mean(conjunto)
   sd(conjunto)
 #+end_src
 
-#+RESULTS: questão-4
+#+RESULTS:
 : [1] 7.6
 : [1] 2.366432
+
