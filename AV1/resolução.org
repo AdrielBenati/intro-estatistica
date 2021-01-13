@@ -7,7 +7,7 @@
 
 ** a) Ache as frequências absolutas, relativas, e relativas acumuladas.
 
-#+begin_src R :results output :export results :tangle 2.r
+#+begin_src R :results output :export results :tangle src/02.r
   ## Define número de matrícula
   matricula <- c(2, 0, 2, 0, 0, 1, 1, 4, 4, 6)
 
@@ -22,14 +22,14 @@
 
 ** b) Grafique o histograma.
 
-#+begin_src R :results output :export results :tangle 2.r
+#+begin_src R :results output :export results :tangle src/02.r
   png(file = "histograma.png")
   hist(matricula, main = "Algarismos da matrícula", xlab = "Peso", ylab = "Frequência")
 #+end_src
 
 ** c) Ache a média, moda, mediana, variância e desvio padrão.
 
-#+begin_src R :results output :export results 2.r
+#+begin_src R :results output :export results :tangle src/02.r
   media <- mean(matricula)
   cat(sprintf('Média dos algarismos: %1.0f\n', media))
 
@@ -56,7 +56,7 @@
 
 ** d) Considere agora também os n = 10 algarismos do seguinte numero de matrícula 2020048967. Compare os dois conjuntos de algarismos, para isso construa os boxplots de ambos conjuntos de algarismos.
 
-#+begin_src R :results output :export results :tangle 2.r
+#+begin_src R :results output :export results :tangle src/02.r
   outramat <- c(2, 0, 2, 0, 0, 4, 8, 9, 6, 7)
 
   png(file = "boxplot.png")

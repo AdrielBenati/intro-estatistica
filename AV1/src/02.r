@@ -1,44 +1,33 @@
-### b) Histograma
-## gerar histograma
+## Define número de matrícula
+matricula <- c(2, 0, 2, 0, 0, 1, 1, 4, 4, 6)
+
+## Retorna tabela de frequência simples
+table(matricula)
+
 png(file = "histograma.png")
 hist(matricula, main = "Algarismos da matrícula", xlab = "Peso", ylab = "Frequência")
-## ainda confuso sobre esta parte. por que isso?
-dev.off()
 
-### b) Média, mediana, moda, variância e devio padrão
-## Média
-## calcular a média e printar
 media <- mean(matricula)
 cat(sprintf('Média dos algarismos: %1.0f\n', media))
 
-## Mediana
-## calcular a mediana e printar
 mediana <- median(matricula)
 cat(sprintf('Mediana dos algarismos: %.1f\n', mediana))
 
-## Moda
-## a biblioteca padrão de R não possui função para determinação da
-## moda, por isso definimos uma função aqui:
+## Função para determinar a moda
 mode <- function (x) {
     u <- unique (x)
     u[which.max(tabulate(match(x, u)))]
 }
 
-## calcular a moda e printar
 moda <- mode(matricula)
 cat(sprintf('Moda dos algarismos: %.0f\n', moda))
 
-## Variância
-## calcular a variância e printar
 variancia <- var(matricula)
 cat(sprintf('Variância dos algarismos: %.3f\n', variancia))
 
-## Desvio Padrão
-## calcular desvio padrão e printar
 desviop <- sd(matricula)
 cat(sprintf('Variância dos algarismos: %.3f\n', desviop))
 
-### d) Boxplot comparativo
 outramat <- c(2, 0, 2, 0, 0, 4, 8, 9, 6, 7)
 
 png(file = "boxplot.png")
