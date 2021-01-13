@@ -1,4 +1,4 @@
-% Created 2021-01-12 Tue 23:15
+% Created 2021-01-12 Tue 23:18
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -29,10 +29,10 @@
 \maketitle
 
 \section*{4)}
-\label{sec:org01ebfb3}
+\label{sec:org85f1683}
 
 \subsection*{a) e b)}
-\label{sec:org3e3a243}
+\label{sec:org9bd919e}
 
 Tomado o conjunto (7, 8, 6, 10, 5, 9, 4, 12, 7, 8), tem-se que:
 
@@ -52,25 +52,7 @@ Desvio padrão do conjunto = 2
 \end{verbatim}
 
 \section*{13)}
-\label{sec:org1bec28c}
-
-\begin{verbatim}
-## gambiarra dos infernos que tive que fazer pra chegar nesse conjunto
-## de dados!
-
-filhos <- c(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
-3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4,
-4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
-6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9,
-9, 9, 9, 9, 9, 10, 10, 11, 11, 11, 12, 12)
-
-cbind(summary(filhos))
-\end{verbatim}
+\label{sec:org9e04ff5}
 
 \begin{verbatim}
              [,1]
@@ -83,10 +65,10 @@ Max.    12.000000
 \end{verbatim}
 
 \section*{19)}
-\label{sec:org54e9e87}
+\label{sec:orgec9c189}
 
 \subsection*{a)}
-\label{sec:orgcbf22d6}
+\label{sec:org4723154}
 
 Utilizando-se do programa em R a seguir, é possível determinar o
 diagrama de ramo-e-folhas.
@@ -123,7 +105,7 @@ The decimal point is at the |
 \end{verbatim}
 
 \subsection*{b)}
-\label{sec:org22f5809}
+\label{sec:orgae22e82}
 
 \begin{verbatim}
 dist <- c(1.8, 2.5, 0.4, 1.9, 4.4, 2.2, 3.5, 0.2, 0.9, 1.4, 1.1, 1.7, 1.2, 2.3, 1.9, 0.8, 1.5, 1.7, 1.4, 2.1, 3.2, 15.1, 2.1, 1.4, 0.5, 0.9, 1.7, 0.5, 0.8, 3.7, 1.4, 1.8, 2.0, 1.1, 1.0, 0.8)
@@ -150,5 +132,27 @@ Max.    15.100 8.80
 Comparando os dados da empresa AAA e BBB, percebe-se que a empresa AAA é a que tem o os extremos mais notáveis, com um extremo superior de 15,1 comparado ao de 8,80 da empresa BBB. Exceto isso, os valores da empresa BBB são em geral mais altos que os da empresa AAA, indicando que os funcionários daquela viajam mais do que os desta.
 
 \subsection*{c)}
-\label{sec:orgfda4561}
+\label{sec:orgd8e4dc9}
+
+\begin{verbatim}
+dist <- c(1.8, 2.5, 0.4, 1.9, 4.4, 2.2, 3.5, 0.2, 0.9, 1.4, 1.1, 1.7,
+1.2, 2.3, 1.9, 0.8, 1.5, 1.7, 1.4, 2.1, 3.2, 15.1, 2.1, 1.4, 0.5, 0.9,
+1.7, 0.5, 0.8, 3.7, 1.4, 1.8, 2.0, 1.1, 1.0, 0.8)
+
+aaa <- summary(dist)
+
+bbb <- c(0.4, 1.6, 2.8, 4.2, 8.8)
+
+png(file = "boxplot.png")
+
+boxplot(aaa, bbb,
+		main = "Diagrama de caixas: comparação entre AAA e BBB",
+		names  = c('aaa', 'bbb'))
+
+dev.off()
+\end{verbatim}
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{boxplot.png}
+\end{center}
 \end{document}
