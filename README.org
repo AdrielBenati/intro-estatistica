@@ -31,3 +31,6 @@ Os direitos autorais dos documentos (formatos .pdf, entre outros)
 pertencem aos seus respectivos autores, exceto pelos documentos
 gerados pelo código fonte acima citado; estes também estão sujeitos
 aos termos da GNU General Public License.
+
+Os termos da GNU General Public License podem também ser consultados
+no arquivo LICENSE.
