@@ -60,7 +60,7 @@ Tomado o conjunto (7, 8, 6, 10, 5, 9, 4, 12, 7, 8), tem-se que:
 Utilizando-se do programa em R a seguir, é possível determinar o
 diagrama de ramo-e-folhas.
 
-#+begin_src R :results output :exports both :tangle src/19a.r
+#+begin_src R :results output :exports both :tangle src/19.r
   dist <- c(1.8, 2.5, 0.4, 1.9, 4.4, 2.2, 3.5, 0.2, 0.9, 1.4, 1.1,
   1.7, 1.2, 2.3, 1.9, 0.8, 1.5, 1.7, 1.4, 2.1, 3.2, 15.1, 2.1, 1.4,
   0.5, 0.9, 1.7, 0.5, 0.8, 3.7, 1.4, 1.8, 2.0, 1.1, 1.0, 0.8)
@@ -70,11 +70,10 @@ diagrama de ramo-e-folhas.
 
 ** b)
 
-#+begin_src R :results output :exports both :tangle src/19b.r
-  dist <- c(1.8, 2.5, 0.4, 1.9, 4.4, 2.2, 3.5, 0.2, 0.9, 1.4, 1.1,
-  1.7, 1.2, 2.3, 1.9, 0.8, 1.5, 1.7, 1.4, 2.1, 3.2, 15.1, 2.1, 1.4,
-  0.5, 0.9, 1.7, 0.5, 0.8, 3.7, 1.4, 1.8, 2.0, 1.1, 1.0, 0.8)
+Continuando da etapa anterior, calculamos os dados elementares das
+empresas AAA e BBB e os comparamos.
 
+#+begin_src R :results output :exports both :tangle src/19.r
   aaa <- summary(dist)
 
   ccc <- c(0.4, 1.6, 2.8, 4.2, 8.8)
@@ -96,13 +95,10 @@ Comparando os dados da empresa AAA e BBB, percebe-se que a empresa AAA é a que 
 
 ** c)
 
-#+begin_src R :file boxplot.png :results output graphics file :exports both :tangle src/19c.r
-  dist <- c(1.8, 2.5, 0.4, 1.9, 4.4, 2.2, 3.5, 0.2, 0.9, 1.4, 1.1, 1.7,
-  1.2, 2.3, 1.9, 0.8, 1.5, 1.7, 1.4, 2.1, 3.2, 15.1, 2.1, 1.4, 0.5, 0.9,
-  1.7, 0.5, 0.8, 3.7, 1.4, 1.8, 2.0, 1.1, 1.0, 0.8)
+Continuando da anterior, colocamos os dados de ambas as empresas em
+comparação num boxplot.
 
-  aaa <- summary(dist)
-
+#+begin_src R :file boxplot.png :results output graphics file :exports both :tangle src/19.r
   bbb <- c(0.4, 1.6, 2.8, 4.2, 8.8)
 
   png(file = "boxplot.png")
