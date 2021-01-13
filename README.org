@@ -20,3 +20,14 @@ avaliação da disciplina.
 ** AV3: Terceira Prova
 ** AV4: Trabalho Final
 ** AV5: Listas de exercícios
+
+* Licensa
+
+Todo o código fonte original aqui presente (incluindo arquivos .org,
+.r e .tex) está licensiado sob os termos da [[https://www.gnu.org/licenses/gpl-3.0.html][GNU General Public License
+(GPL)]].
+
+Os direitos autorais dos documentos (formatos .pdf, entre outros)
+pertencem aos seus respectivos autores, exceto pelos documentos
+gerados pelo código fonte acima citado; estes também estão sujeitos
+aos termos da GNU General Public License.
