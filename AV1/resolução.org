@@ -1,0 +1,69 @@
+#+title: Primeira Prova Emergencial
+#+author: Adriel Benati de Melo
+
+* Considere os n = 10 algarismos de seu número de matrícula, com estes 10 números faça o seguinte:
+
+2020011446 --> n = (2, 0, 2, 0, 0, 1, 1, 4, 4, 6)
+
+** a) Ache as frequências absolutas, relativas, e relativas acumuladas.
+
+#+begin_src R :results output :export results :tangle 2.r
+  ## Define número de matrícula
+  matricula <- c(2, 0, 2, 0, 0, 1, 1, 4, 4, 6)
+
+  ## Retorna tabela de frequência simples
+  table(matricula)
+#+end_src
+
+#+RESULTS:
+: matricula
+: 0 1 2 4 6 
+: 3 2 2 2 1 
+
+** b) Grafique o histograma.
+
+#+begin_src R :results output :export results :tangle 2.r
+  png(file = "histograma.png")
+  hist(matricula, main = "Algarismos da matrícula", xlab = "Peso", ylab = "Frequência")
+#+end_src
+
+** c) Ache a média, moda, mediana, variância e desvio padrão.
+
+#+begin_src R :results output :export results 2.r
+  media <- mean(matricula)
+  cat(sprintf('Média dos algarismos: %1.0f\n', media))
+
+  mediana <- median(matricula)
+  cat(sprintf('Mediana dos algarismos: %.1f\n', mediana))
+
+  ## Função para determinar a moda
+  mode <- function (x) {
+      u <- unique (x)
+      u[which.max(tabulate(match(x, u)))]
+  }
+
+  moda <- mode(matricula)
+  cat(sprintf('Moda dos algarismos: %.0f\n', moda))
+
+  variancia <- var(matricula)
+  cat(sprintf('Variância dos algarismos: %.3f\n', variancia))
+
+  desviop <- sd(matricula)
+  cat(sprintf('Variância dos algarismos: %.3f\n', desviop))
+#+end_src
+
+#+RESULTS:
+
+** d) Considere agora também os n = 10 algarismos do seguinte numero de matrícula 2020048967. Compare os dois conjuntos de algarismos, para isso construa os boxplots de ambos conjuntos de algarismos.
+
+#+begin_src R :results output :export results :tangle 2.r
+  outramat <- c(2, 0, 2, 0, 0, 4, 8, 9, 6, 7)
+
+  png(file = "boxplot.png")
+
+  boxplot(matricula ~ outramat, xlab = "Matrícula dada",
+     ylab = "Minha matrícula", main = "Comparação entre matrículas")
+
+  median(outramat)
+  outramat
+#+end_src

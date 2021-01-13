@@ -1,11 +1,3 @@
-### Questão 2
-## Capturar input do usuário como string
-matricula <- readline(prompt="Insira sua matrícula: ")
-
-## Divide string em caracteres, transforma-os em lista numérica
-matricula <- as.numeric(strsplit(as.character(matricula), "")[[1]])
-print(matricula)
-
 ### b) Histograma
 ## gerar histograma
 png(file = "histograma.png")
