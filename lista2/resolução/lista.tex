@@ -1,4 +1,4 @@
-% Created 2021-01-12 Tue 22:46
+% Created 2021-01-12 Tue 23:15
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -29,12 +29,22 @@
 \maketitle
 
 \section*{4)}
-\label{sec:orgcd07a13}
+\label{sec:org01ebfb3}
 
 \subsection*{a) e b)}
-\label{sec:org6e8c663}
+\label{sec:org3e3a243}
 
 Tomado o conjunto (7, 8, 6, 10, 5, 9, 4, 12, 7, 8), tem-se que:
+
+\begin{verbatim}
+conjunto <- c(7, 8, 6, 10, 5, 9, 4, 12, 7, 8)
+
+media <- mean(conjunto)
+desvp <- sd(conjunto)
+
+cat(sprintf('Média do conjunto =  %1.0f\n', media))
+cat(sprintf('Desvio padrão do conjunto = %1.0f\n', desvp))
+\end{verbatim}
 
 \begin{verbatim}
 Média do conjunto =  8
@@ -42,15 +52,44 @@ Desvio padrão do conjunto = 2
 \end{verbatim}
 
 \section*{13)}
-\label{sec:orgbeb687d}
+\label{sec:org1bec28c}
 
-Os extremos são 1 e 12, os quartis 2 e 6, e a mediana 4.
+\begin{verbatim}
+## gambiarra dos infernos que tive que fazer pra chegar nesse conjunto
+## de dados!
+
+filhos <- c(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4,
+4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
+5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9,
+9, 9, 9, 9, 9, 10, 10, 11, 11, 11, 12, 12)
+
+cbind(summary(filhos))
+\end{verbatim}
+
+\begin{verbatim}
+             [,1]
+Min.     1.000000
+1st Qu.  2.000000
+Median   4.000000
+Mean     4.306977
+3rd Qu.  6.000000
+Max.    12.000000
+\end{verbatim}
 
 \section*{19)}
-\label{sec:orgb2fd997}
+\label{sec:org54e9e87}
 
 \subsection*{a)}
-\label{sec:org1ca2407}
+\label{sec:orgcbf22d6}
+
+Utilizando-se do programa em R a seguir, é possível determinar o
+diagrama de ramo-e-folhas.
 
 \begin{verbatim}
 dist <- c(1.8, 2.5, 0.4, 1.9, 4.4, 2.2, 3.5, 0.2, 0.9, 1.4, 1.1,
@@ -84,7 +123,18 @@ The decimal point is at the |
 \end{verbatim}
 
 \subsection*{b)}
-\label{sec:org09a4082}
+\label{sec:org22f5809}
+
+\begin{verbatim}
+dist <- c(1.8, 2.5, 0.4, 1.9, 4.4, 2.2, 3.5, 0.2, 0.9, 1.4, 1.1, 1.7, 1.2, 2.3, 1.9, 0.8, 1.5, 1.7, 1.4, 2.1, 3.2, 15.1, 2.1, 1.4, 0.5, 0.9, 1.7, 0.5, 0.8, 3.7, 1.4, 1.8, 2.0, 1.1, 1.0, 0.8)
+
+aaa <- summary(dist)
+
+ccc <- c(0.4, 1.6, 2.8, 4.2, 8.8)
+bbb <- summary(ccc)
+
+cbind(aaa, bbb)
+\end{verbatim}
 
 \begin{verbatim}
            aaa  bbb
@@ -96,10 +146,9 @@ Mean     2.025 3.56
 Max.    15.100 8.80
 \end{verbatim}
 
-\subsection*{c)}
-\label{sec:org367c05f}
 
-\begin{center}
-\includegraphics[width=.9\linewidth]{boxplot.png}
-\end{center}
+Comparando os dados da empresa AAA e BBB, percebe-se que a empresa AAA é a que tem o os extremos mais notáveis, com um extremo superior de 15,1 comparado ao de 8,80 da empresa BBB. Exceto isso, os valores da empresa BBB são em geral mais altos que os da empresa AAA, indicando que os funcionários daquela viajam mais do que os desta.
+
+\subsection*{c)}
+\label{sec:orgfda4561}
 \end{document}
