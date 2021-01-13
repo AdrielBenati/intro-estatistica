@@ -6,15 +6,23 @@
 
 * 4)
 
+** a) e b)
+
+Tomado o conjunto (7, 8, 6, 10, 5, 9, 4, 12, 7, 8), tem-se que:
+
 #+begin_src R :results output :exports both 
   conjunto <- c(7, 8, 6, 10, 5, 9, 4, 12, 7, 8)
-  mean(conjunto)
-  sd(conjunto)
+
+  media <- mean(conjunto)
+  desvp <- sd(conjunto)
+
+  cat(sprintf('Média do conjunto =  %1.0f\n', media))
+  cat(sprintf('Desvio padrão do conjunto = %1.0f\n', desvp))
 #+end_src
 
 #+RESULTS:
-: [1] 7.6
-: [1] 2.366432
+: Média do conjunto =  8
+: Desvio padrão do conjunto = 2
 
 * 13)
 
