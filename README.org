@@ -15,11 +15,11 @@ com LaTeX e R.
 Os diretórios aqui estão organizados de acordo com o sistema de
 avaliação da disciplina.
 
-** AV1: Primeira Prova
-** AV2: Segunda Prova
-** AV3: Terceira Prova
-** AV4: Trabalho Final
-** AV5: Listas de exercícios
+- AV1 :: Primeira Prova
+- AV2 :: Segunda Prova
+- AV3 :: Terceira Prova
+- AV4 :: Trabalho Final
+- AV5 :: Listas de exercícios
 
 * Licensa
 
