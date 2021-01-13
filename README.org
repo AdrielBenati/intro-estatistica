@@ -1,0 +1,22 @@
+#+title: Introdução à Estatística 2020-2
+
+* Sobre
+
+Este repositório contém todos os arquivos de código fonte gerados na
+realização de trabalhos e provas da disciplina de Introdução à
+Economia 2020-2, na UFMG.
+
+Estas atividades avaliativas foram realizadas por meio do [[https://gnu.org/software/emacs][GNU Emacs]],
+utilizando-se do poderoso [[https://orgmode.org/][Org Mode]], por suas capacidades de interação
+com LaTeX e R.
+
+* Organização
+
+Os diretórios aqui estão organizados de acordo com o sistema de
+avaliação da disciplina.
+
+** AV1: Primeira Prova
+** AV2: Segunda Prova
+** AV3: Terceira Prova
+** AV4: Trabalho Final
+** AV5: Listas de exercícios
