@@ -1,7 +1,7 @@
 #+title: Primeira Prova Emergencial
 #+author: Adriel Benati de Melo
 
-* Considere os n = 10 algarismos de seu número de matrícula, com estes 10 números faça o seguinte:
+* 2) Considere os n = 10 algarismos de seu número de matrícula, com estes 10 números faça o seguinte:
 
 2020011446 --> n = (2, 0, 2, 0, 0, 1, 1, 4, 4, 6)
 
